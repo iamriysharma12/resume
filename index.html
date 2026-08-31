@@ -405,6 +405,41 @@
   }
 
   /* ---------- Projects ---------- */
+  .project-featured{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:40px 36px;
+    margin-bottom:1px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+  }
+  .featured-badge{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--accent);
+    background:var(--accent-soft);
+    padding:5px 10px;
+    border-radius:2px;
+    display:inline-block;
+    margin-bottom:14px;
+    width:fit-content;
+  }
+  .project-featured h3{ font-size:27px; margin-bottom:4px; }
+  .project-featured .project-stack{ margin-bottom:0; }
+  .featured-metrics{
+    display:flex;
+    flex-direction:column;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    align-self:start;
+  }
+  .featured-metrics .stat-card{ padding:20px 22px; }
+  .featured-metrics .stat-card .num{ font-size:28px; }
+
   .projects-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -547,6 +582,7 @@
     .job{ grid-template-columns:1fr; gap:10px; }
     .skills-grid{ grid-template-columns:1fr; }
     .projects-grid{ grid-template-columns:1fr; }
+    .project-featured{ grid-template-columns:1fr; }
     .edu-row{ grid-template-columns:1fr; gap:6px; }
     .contact-grid{ grid-template-columns:1fr; gap:28px; }
     section{ padding:72px 0; }
@@ -711,6 +747,25 @@
         <span class="eyebrow">04 — Projects</span>
         <h2>Independent work.</h2>
       </div>
+      <div class="project-featured reveal">
+        <div>
+          <span class="featured-badge">Featured</span>
+          <h3>Supply Chain Risk &amp; Regional Expansion Analytics — Swiss Beauty</h3>
+          <div class="project-stack">SQL · Power BI</div>
+          <ul style="margin-top:18px;">
+            <li>Built an end-to-end analytics pipeline (SQL → Power BI) analyzing supplier concentration, geographic revenue skew, and shade/product-mix gaps for a beauty brand; identified prioritized expansion markets and a shade-range strategy projected to increase addressable market by 70%.</li>
+            <li>Used SQL (window functions, CTEs, HHI, RFM, cohort analysis) to quantify a 99.4% single-supplier concentration risk and a 3–4x shade-mismatch return rate (16% vs. 4.5% baseline) in deeper skin tones.</li>
+            <li>Built a 5-page Power BI dashboard identifying South and West regions (20% of revenue each) as underpenetrated, driving expansion and shade-range recommendations.</li>
+          </ul>
+          <a class="project-link" href="https://github.com/iamriysharma12/Identifying-Swiss-beauty-business-drawback/tree/main" target="_blank" rel="noopener" aria-label="View Supply Chain Risk and Regional Expansion Analytics repository on GitHub">View on GitHub →</a>
+        </div>
+        <div class="featured-metrics">
+          <div class="stat-card"><div class="num">70%</div><div class="lbl">Projected addressable market increase</div></div>
+          <div class="stat-card"><div class="num">99.4%</div><div class="lbl">Single-supplier concentration risk</div></div>
+          <div class="stat-card"><div class="num">3–4x</div><div class="lbl">Shade-mismatch return rate vs. baseline</div></div>
+        </div>
+      </div>
+
       <div class="projects-grid reveal">
 
         <div class="project-card">
